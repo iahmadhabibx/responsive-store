@@ -24,6 +24,7 @@ body {
   --GRAY_100: #e3e5e8;
   --GRAY_200: #c7cbd1;
   --GRAY_400: #8e97a4;
+  --GRAY_500: #727e8d;
   --GRAY_600: #647181;
   --GRAY_700: #44505f;
   --BLUE_100: #e6eefe;
@@ -43,8 +44,9 @@ body {
   :root {
     --BANNER_HEIGHT: 176px;
     --CARD_WIDTH: 100%;
+    --SIDEBAR_TOP_HEIGHT: 80px;
   }
-  button {
+  .btn {
     height: 40px;
     min-width: 133px;
     padding: 8px 20px;
@@ -56,7 +58,7 @@ body {
   }
 }
 @media (max-width: 500px) {
-  button {
+  .btn {
     height: 40px;
     min-width: 80px;
     padding: 8px 16px;
@@ -113,7 +115,7 @@ main {
 .flex-wrap {
   flex-wrap: wrap;
 }
-button {
+.btn {
   border-radius: 8px;
   height: 48px;
   min-width: 150px;
