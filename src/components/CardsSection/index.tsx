@@ -69,7 +69,7 @@ const CardsSection: FC<CardSectionProps> = (props) => {
 
       <section className="all-cards flex w-full items-center flex-wrap justify-between">
         {React.Children.toArray(
-          ITEMS.map((item: Item) => <RecipeCard {...item} />)
+          ITEMS.map((item: Item) => <RecipeCard {...item} size="sm" />)
         )}
       </section>
     </aside>

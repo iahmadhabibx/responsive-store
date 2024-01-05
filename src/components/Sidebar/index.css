@@ -15,10 +15,15 @@
   margin-top: 0.5rem;
 }
 
+.bottom-bar ul {
+  gap: 2rem;
+}
+
 .bottom-bar ul li {
   transition: all 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
   cursor: pointer;
 }
+
 .li-title {
   color: var(--GRAY_600);
   font-weight: 500;
@@ -32,6 +37,10 @@
 .bottom-bar footer {
   position: absolute;
   bottom: 30px;
+}
+
+.bottom-bar footer {
+  gap: 1rem;
 }
 
 @media (max-width: 992px) {

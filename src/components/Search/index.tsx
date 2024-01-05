@@ -7,7 +7,7 @@ import GlobeIcon from "../../assets/ts-icons/GlobeIcon";
 import IngredientIcon from "../../assets/ts-icons/IngredientIcon";
 
 const Search = () => {
-  const [isFocused, setFocus] = useState(true);
+  const [isFocused, setFocus] = useState(false);
   const [isSelected, setSelected] = useState(0);
   const [searchItems] = useState([
     { id: 1, title: "Recipes", icon: RecipeIcon2 },

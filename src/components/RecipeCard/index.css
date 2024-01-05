@@ -6,6 +6,12 @@
   overflow: hidden;
 }
 
+.recipe-card.large {
+  width: 80% !important;
+  border: unset !important;
+  align-items: flex-start !important;
+}
+
 .chens {
   gap: 1rem;
 }
@@ -20,6 +26,19 @@
   font-size: 20px;
   line-height: 28px;
   margin-bottom: 0.5rem;
+}
+
+.card-title.large {
+  font-size: 40px !important;
+  font-weight: 700 !important;
+  margin: 1rem 0;
+}
+
+.desc {
+  color: var(--GRAY_700);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .chens div small {
@@ -42,6 +61,22 @@
   font-size: 14px;
 }
 
+.btns-container {
+  position: relative;
+  top: 50px;
+  gap: 1rem;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+}
+.btn.outline {
+  background-color: unset !important;
+  border: 1px solid var(--PRIMARY_GREEN);
+  color: var(--PRIMARY_GREEN);
+  margin-left: .5rem;
+}
 @media(max-width: 992px) {
   .recipe-card img.rec-img {
     height: 120px;
@@ -50,5 +85,19 @@
   .card-title {
     font-size: 18px;
     line-height: 24px;
+  }
+  .recipe-card.large {
+    width: 100% !important;
+  }
+  .large {
+    flex-direction: column;
+  }
+  .large img.rec-img {
+    width: 100%;
+    height: 360px !important;
+  }
+  .btns-container {
+    top: unset;
+    padding: 2rem 0 0 0;
   }
 }
