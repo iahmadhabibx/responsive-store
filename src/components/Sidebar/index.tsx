@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Logo from "../../assets/logo.svg";
 import "./index.css";
 import HomeIcon from "../../assets/ts-icons/HomeIcon";
 import RecipesIcon from "../../assets/ts-icons/RecipesIcon";
@@ -14,43 +13,77 @@ const Sidebar = () => {
     { id: 3, title: "Community", icon: CommunityIcon },
     { id: 4, title: "Saved recipes", icon: HeartIcon },
   ]);
+  const [sidebarItemsResp] = useState([
+    { id: 1, icon: HomeIcon },
+    { id: 2, icon: RecipesIcon },
+    { id: 3, icon: CommunityIcon },
+    { id: 4, icon: HeartIcon },
+    { id: 5, icon: SettingsIcon },
+  ]);
   const [isHovered, setHovered] = useState(0);
-  const [isSelected, setSelected] = useState(0);
+  const [isSelected, setSelected] = useState(1);
 
   return (
-    <aside className="sidebar">
-      <section className="bars top-bar flex items-center justify-center">
-        <img src={Logo} alt="Meal Deal" />
-        <div className="top-content flex flex-col">
-          <h2>Meal Deal</h2>
-          <small>Recipes for healthy life</small>
-        </div>
-      </section>
-      <section className="bars bottom-bar">
-        <ul className="w-full flex items-start flex-col">
+    <React.Fragment>
+      <aside className="sidebar">
+        <section className="bars bottom-bar">
+          <ul className="w-full flex items-start flex-col">
+            {React.Children.toArray(
+              sidebarItems.map((item) => (
+                <li
+                  style={{ gap: ".5rem" }}
+                  className={`inline-flex items-center ${
+                    isSelected === item.id && "selected"
+                  } `}
+                  onClick={() => setSelected(item.id)}
+                  onMouseOver={() => setHovered(item.id)}
+                  onMouseLeave={() => setHovered(0)}
+                >
+                  <item.icon
+                    fill={
+                      isHovered === item.id || isSelected === item.id
+                        ? "#089B12"
+                        : "#AAB1BB"
+                    }
+                  />
+                  <small className="li-title">{item.title}</small>
+                </li>
+              ))
+            )}
+          </ul>
+
+          <footer className="inline-flex items-center">
+            <SettingsIcon />
+            <small className="li-title">Settings</small>
+          </footer>
+        </section>
+      </aside>
+      <aside className="sidebar-responsive">
+        <ul className="w-full flex items-start justify-between">
           {React.Children.toArray(
-            sidebarItems.map((item) => (
+            sidebarItemsResp.map((item) => (
               <li
                 style={{ gap: ".5rem" }}
-                className="inline-flex items-center"
+                className={`inline-flex items-center ${
+                  isSelected === item.id && "selected"
+                } `}
+                onClick={() => setSelected(item.id)}
                 onMouseOver={() => setHovered(item.id)}
                 onMouseLeave={() => setHovered(0)}
               >
                 <item.icon
-                  fill={isHovered === item.id ? "#089B12" : "#647181"}
+                  fill={
+                    isHovered === item.id || isSelected === item.id
+                      ? "#089B12"
+                      : "#AAB1BB"
+                  }
                 />
-                <small className="li-title">{item.title}</small>
               </li>
             ))
           )}
         </ul>
-
-        <footer className="inline-flex items-center">
-            <SettingsIcon />
-            <small className="li-title">Settings</small>
-        </footer>
-      </section>
-    </aside>
+      </aside>
+    </React.Fragment>
   );
 };
 export default Sidebar;

@@ -18,20 +18,51 @@ body {
   --SIDEBAR_TOP_HEIGHT: 120px;
   --SEARCH_BAR_HEIGHT: 56px;
   --SEARCH_BAR_WIDTH: 448px;
+  --CARD_WIDTH: 448px;
   --BANNER_HEIGHT: 256px;
   --GRAY_50: #f4f5f6;
   --GRAY_100: #e3e5e8;
   --GRAY_200: #c7cbd1;
   --GRAY_400: #8e97a4;
   --GRAY_600: #647181;
-  --GRAY_700: #44505F;
-  --BLUE_100: #E6EEFE;
-  --BLUE_600: #2851A3;
+  --GRAY_700: #44505f;
+  --BLUE_100: #e6eefe;
+  --BLUE_600: #2851a3;
   --PRIMARY_WHITE: #ffffff;
   --PRIMARY_BLACK: #080f1d;
   --PRIMARY_GREEN: #089b12;
   --SECONDARY_GREEN: #15c421;
 }
+
+@media (max-width: 1350px) {
+  :root {
+    --CARD_WIDTH: 400px;
+  }
+}
+@media (max-width: 992px) {
+  :root {
+    --BANNER_HEIGHT: 176px;
+    --CARD_WIDTH: 100%;
+  }
+  button {
+    height: 40px;
+    min-width: 133px;
+    padding: 8px 20px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  main {
+    padding: 0;
+  }
+}
+@media (max-width: 500px) {
+  button {
+    height: 40px;
+    min-width: 80px;
+    padding: 8px 16px;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -45,6 +76,9 @@ ul,
 li {
   padding: 0;
   list-style-type: none;
+}
+main {
+  padding: 0.5rem;
 }
 .w-full {
   width: 100%;

@@ -17,7 +17,6 @@
 }
 
 .banner-texts button {
-    margin-top: 1rem;
 }
 
 .banner-texts h1 {
@@ -25,4 +24,37 @@
   font-size: 40px;
   font-weight: 700;
   line-height: 52px;
+}
+
+@media (max-width: 992px) {
+  .banner {
+    flex-direction: column;
+    position: relative;
+  }
+  .banner-texts {
+    max-width: 60%;
+  }
+  .banner-dish {
+    height: 200px;
+    max-width: auto;
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+  }
+
+  .banner-texts h1 {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 500px) {
+  .banner-texts {
+    max-width: 80%;
+  }
+  .banner-dish {
+    height: 150px;
+  }
+  .banner {
+    padding: 1rem;
+  }
 }

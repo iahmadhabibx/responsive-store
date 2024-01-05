@@ -15,7 +15,7 @@ const RecipeCard: FC<RecipeCardProps> = (props) => {
   const { image, title, tags, time, level } = props;
   return (
     <div className="recipe-card flex items-center">
-      <img src={image} alt={title} />
+      <img className="rec-img" src={image} alt={title} />
       <section>
         <h3 className="card-title">{title}</h3>
         <aside className="chens flex items-center">
