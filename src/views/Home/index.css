@@ -1,0 +1,11 @@
+.home {
+    padding: 2rem 8rem;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - var(--SIDEBAR_WIDTH));
+}
+
+.home header h1 {
+    font-size: 40px;
+    font-weight: normal;
+}

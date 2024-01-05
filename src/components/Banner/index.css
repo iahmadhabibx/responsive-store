@@ -1,0 +1,28 @@
+.banner {
+  background-color: var(--GRAY_100);
+  height: var(--BANNER_HEIGHT);
+  margin-top: 3rem;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.banner-texts,
+.banner-dish {
+  max-width: 50%;
+}
+
+.banner-dish {
+  height: 302px;
+  margin-top: -30px;
+}
+
+.banner-texts button {
+    margin-top: 1rem;
+}
+
+.banner-texts h1 {
+  color: var(--PRIMARY_BLACK);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 52px;
+}

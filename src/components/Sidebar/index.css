@@ -1,0 +1,60 @@
+.sidebar {
+  width: var(--SIDEBAR_WIDTH);
+  height: 100%;
+  padding: 0.5rem;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.bars {
+  border-radius: 8px;
+}
+.sidebar .top-bar {
+  background-color: var(--PRIMARY_BLACK);
+  height: var(--SIDEBAR_TOP_HEIGHT);
+  gap: 0.75rem;
+}
+.sidebar .bottom-bar {
+  background-color: var(--GRAY_50);
+  height: calc(100% - var(--SIDEBAR_TOP_HEIGHT));
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+.top-bar .top-content h2,
+.top-bar .top-content small {
+  color: var(--GRAY_50);
+}
+.top-bar .top-content h2 {
+  font-weight: bold;
+}
+.top-bar .top-content small {
+  font-weight: normal;
+  font-size: 14px;
+}
+.top-bar img {
+  height: 48px;
+  width: 48px;
+}
+
+.bottom-bar ul, .bottom-bar footer {
+  gap: 1rem;
+}
+
+.bottom-bar ul li {
+  transition: all 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+}
+.li-title {
+  color: var(--GRAY_600);
+  font-weight: 500;
+  font-size: 16px;
+}
+.bottom-bar ul li:hover {
+  color: var(--PRIMARY_GREEN);
+}
+
+.bottom-bar footer {
+  position: absolute;
+  bottom: 30px;
+}

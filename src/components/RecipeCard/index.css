@@ -1,0 +1,40 @@
+.recipe-card {
+  border: 1px solid var(--GRAY_100);
+  width: 448px;
+  gap: 1.25rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.chens {
+  gap: 1rem;
+}
+.chens div {
+  gap: 0.25rem;
+}
+
+.card-title {
+  color: var(--PRIMARY_BLACK);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 0.5rem;
+}
+
+.chens div small {
+  color: var(--GRAY_700);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.tag-wrapper {
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.tag-wrapper .tag {
+  background-color: var(--BLUE_100);
+  color: var(--BLUE_600);
+  border-radius: 4px;
+  padding: 2px 8px;
+  height: 24px;
+}

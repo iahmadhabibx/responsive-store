@@ -1,0 +1,19 @@
+.search-bar {
+    height: var(--SEARCH_BAR_HEIGHT);
+    width: var(--SEARCH_BAR_WIDTH);
+    padding: 16px 20px;
+    border: 1px solid var(--GRAY_200);
+    border-radius: 8px;
+}
+
+.search-bar input {
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color: var(--GRAY_400);
+}
+
+.search-bar input::placeholder {
+    color: var(--GRAY_400);
+}
